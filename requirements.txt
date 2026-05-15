@@ -1,0 +1,6 @@
+// dataAnonymizer dosyası için gerekli kütüphaneler listelenmiştir:
+transformers
+torch
+fastapi
+uvicorn
+pydantic
