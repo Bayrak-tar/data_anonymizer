@@ -1,0 +1,22 @@
+[
+  {"id":"short-names", "text":"[[NAME|Ali]] geldi. [[NAME|Can]] aradı. [[NAME|Ece]] yazdı."},
+  {"id":"suffixes", "text":"[[NAME|İpek]]'in dosyasını [[NAME|Ahmet Yılmaz]]'a ilettim."},
+  {"id":"repeats", "text":"[[NAME|Ayşe Demir]] geldi. [[NAME|Ayşe Demir]] tekrar aradı."},
+  {"id":"email-punctuation", "text":"E-posta: [[EMAIL|deneme@example.com]], yanıt bekliyorum."},
+  {"id":"phone-formats", "text":"Telefon: [[PHONE|+90 (532) 123 45 67]]; cep: [[PHONE|0532-123-45-67]]."},
+  {"id":"valid-tc", "text":"TC: [[TC|10000000146]]"},
+  {"id":"invalid-tc-context", "text":"Kimlik no: [[TC|12345678901]]"},
+  {"id":"iban", "text":"IBAN: [[IBAN|TR33 0006 1005 1978 6457 8413 26]]"},
+  {"id":"card", "text":"Kart: [[CREDIT_CARD|4111 1111 1111 1111]]"},
+  {"id":"card-compact", "text":"Kart: [[CREDIT_CARD|4111111111111111]]"},
+  {"id":"customer", "text":"Müşteri Numaram: [[CUSTOMER_ID|987654]]"},
+  {"id":"technical", "text":"[[BRAND|VMware]] sunucusu: [[IP_ADDRESS|192.168.1.1]]"},
+  {"id":"url", "text":"Bağlantı: [[URL|https://example.com/user?id=123]]"},
+  {"id":"date", "text":"Tarih: [[DATE|12.03.2025]]"},
+  {"id":"plate", "text":"Plaka: [[PLATE|34 ABC 123]]"},
+  {"id":"location", "text":"[[NAME|Ahmet Yılmaz]], [[LOCATION|Ankara]] şehrinde yaşıyor."},
+  {"id":"unicode", "text":"😀 [[NAME|Ece]] bize yazdı: [[EMAIL|ece@example.com]]"},
+  {"id":"misspelling", "text":"[[NAME|Ahmt Yılmaz]] yarın gelecek."},
+  {"id":"negative", "text":"Bugün hava güzel. Toplantı tamamlandı, rapor hazır."},
+  {"id":"long-tail", "prefix_repeat":600, "text":"Son kayıt: [[NAME|Ayşe Demir]] ile [[EMAIL|test@example.com]] üzerinden görüşüldü."}
+]

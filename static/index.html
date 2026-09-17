@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orijinal Metin | Data Anonymizer</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div>
+        <p class="eyebrow">GÜVENLİ METİN İŞLEME</p>
+        <h1>Data Anonymizer</h1>
+      </div>
+      <div class="status-pill" id="serviceStatus" role="status">Sunucu kontrol ediliyor…</div>
+    </header>
+
+    <section class="workspace" aria-label="Metin anonimleştirme aracı">
+      <article class="panel input-panel">
+        <div class="panel-heading">
+          <div class="heading-icon blue-icon" aria-hidden="true">▤</div>
+          <div>
+            <p class="panel-kicker">GİRİŞ</p>
+            <h2>Orijinal Metin</h2>
+          </div>
+        </div>
+        <label id="apiKeyLabel" hidden>API anahtarı <input id="apiKey" type="password" autocomplete="off" spellcheck="false"></label>
+        <textarea id="sourceText" maxlength="100000" placeholder="Anonimleştirilecek metni buraya yazın..." aria-label="Anonimleştirilecek metin"></textarea>
+        <div class="input-meta"><span id="charCount">0</span> / 100.000 karakter</div>
+        <div class="actions">
+          <button class="primary-button" id="anonymizeButton" type="button">
+            <svg class="anonymize-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 20c.8-3.2 3.1-5 7-5s6.2 1.8 7 5" />
+              <circle cx="12" cy="9" r="4.2" />
+              <path d="M8.4 8.7h7.2M9.4 11.1c1.5.8 3.7.8 5.2 0" />
+              <path d="m18.5 3 .5 1.5L20.5 5 19 5.5 18.5 7 18 5.5 16.5 5 18 4.5Z" />
+            </svg>
+            Anonimleştir
+          </button>
+          <button class="secondary-button" id="clearButton" type="button">
+            <svg class="clear-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 7h14M9 7V5h6v2M7 7l.8 12h8.4L17 7M10 10v6M14 10v6" />
+            </svg>
+            Temizle
+          </button>
+        </div>
+      </article>
+
+      <article class="panel output-panel">
+        <div class="panel-heading output-heading">
+          <div class="heading-icon aqua-icon" aria-hidden="true">◈</div>
+          <div>
+            <p class="panel-kicker">ÇIKIŞ</p>
+            <h2>Anonimleştirilmiş Metin</h2>
+          </div>
+          <div class="output-actions">
+            <button class="icon-button copy-icon" id="copyButton" type="button" title="Sonucu kopyala" aria-label="Sonucu kopyala">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path class="copy-back" d="M8 7V5.5A2.5 2.5 0 0 1 10.5 3h7A2.5 2.5 0 0 1 20 5.5v7a2.5 2.5 0 0 1-2.5 2.5H16" />
+                <rect class="copy-front" x="4" y="8" width="12" height="12" rx="2.5" />
+              </svg>
+            </button>
+            <button class="icon-button" id="downloadButton" type="button" title="Sonucu indir" aria-label="Sonucu indir">↓</button>
+          </div>
+        </div>
+        <div class="result-box" id="resultBox" aria-live="polite"><span>Sonuç burada görünecek...</span></div>
+        <p id="resultSummary" role="status"></p>
+        <div class="notice"><span class="notice-icon">△</span><p>Bu araç tüm hassas bilgileri yakalayamayabilir. Paylaşmadan önce çıktıyı kontrol ederek özel bilgilerin tamamen kaldırıldığından emin olun.</p></div>
+      </article>
+    </section>
+    <section class="entity-list" id="entityList" aria-live="polite" aria-label="Anonimleştirilen bilgiler"></section>
+    <p class="footer-note">Metniniz yalnızca anonimleştirme işlemi için kullanılır.</p>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

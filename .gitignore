@@ -48,3 +48,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Local Python environment and test caches
+.venv/
+__pycache__/
+.pytest_cache/
+.env

@@ -1,6 +1,10 @@
-// dataAnonymizer dosyası için gerekli kütüphaneler listelenmiştir:
-transformers
+# Uygulama bağımlılıkları
+transformers>=4.35,<6
 torch
-fastapi
+fastapi>=0.115,<1
 uvicorn
-pydantic
+pydantic>=2,<3
+
+# Test bağımlılıkları
+pytest>=8,<10
+httpx>=0.27,<1
