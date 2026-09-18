@@ -69,6 +69,10 @@ Bayram BAYRAKTAR ile deneme@example.com adresinden iletişime geçebilirsiniz.
 [NAME_1] ile [EMAIL_1] adresinden iletişime geçebilirsiniz.
 ```
 
+## Uygulama ekranı
+
+![Data Anonymizer test ekranı](test.png)
+
 ## Hangi bilgiler maskelenir?
 
 Web arayüzü varsayılan **katı maskeleme** profilini kullanır. Aşağıdaki türlerden tespit edilen alanlar `[TÜR_1]`, `[TÜR_2]` gibi yer tutucularla değiştirilir. Örnekler gösterim amaçlıdır; isim, konum ve kurum tespitleri metnin bağlamına ve modelin güven puanına bağlıdır.
