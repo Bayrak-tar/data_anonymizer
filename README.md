@@ -209,23 +209,7 @@ Uzun metinler 512 token sınırına sahip mevcut modelde 64 token örtüşmeyle 
 
 Varsayılan dinleme adresi `127.0.0.1:8001`'dir. Aynı kaynaktan çalışan arayüz CORS gerektirmez; dış kaynaklara varsayılan izin verilmez.
 
-```powershell
-# Paylaşılan sunucuda çalıştırmadan önce kendi anahtarınızı belirleyin.
-$env:ANONYMIZER_API_KEY = 'kendi-uzun-rastgele-anahtariniz'
-# Gerekiyorsa LAN erişimi ve ayrı arayüz kaynağı:
-$env:ANONYMIZER_HOST = '0.0.0.0'
-$env:ANONYMIZER_CORS_ORIGINS = 'https://arayuz.example.com'
-python api.py
-```
 
-Anahtar tanımlıysa `/anonymize` için `X-API-Key` başlığı gerekir; arayüzde anahtar alanı açılır. Anahtar tarayıcı depolamasına yazılmaz; Temizle butonu alanı da siler. Ağ üzerinden kullanımda HTTPS sağlayan ters proxy kullanın. Ortam değişkenleri değiştiğinde servisi yeniden başlatın.
-
-- İstek metni en fazla 100.000 Unicode kod noktası; JSON gövdesi en fazla 1.000.000 bayt; elle seçim en fazla 1000 adettir. Tarayıcı metin alanı UTF-16 birimleri saydığından emoji içeren girişlerde daha erken sınır koyabilir.
-- Her uygulama süreci aynı anda bir model işlemi çalıştırır. Diğer işlem istekleri `429` ve `Retry-After: 2` alır. Sağlık kontrolü model çalışırken yanıt verebilir.
-- Geçersiz giriş `422`, büyük gövde `413`, hatalı anahtar `401`, model hatası/hazır olmaması `503` döndürür. Hata yanıtları orijinal metni içermez.
-- Yanıtlar `Cache-Control: no-store` içerir. Uygulama metinleri diske yazmaz; `python api.py` erişim günlüğünü kapatır. Harici proxy/APM kayıtlarını ayrıca yapılandırın.
-- Model ilk kullanımda indirilebilir. Önbellekteki modelle çevrimdışı çalışmak için `$env:HF_HUB_OFFLINE = '1'` kullanın. `ANONYMIZER_MODEL` ile yerel model klasörü belirtilebilir.
-- Arayüz harici font veya script istemez. `/docs` ve `/redoc`, FastAPI'nin varsayılan CDN kaynaklarını kullanır.
 
 ## Test ve kalite ölçümü
 
