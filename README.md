@@ -1,4 +1,4 @@
-# Data Anonymizer
+ # Data Anonymizer
 
 Türkçe metinlerdeki kişisel ve hassas bilgileri anonimleştiren FastAPI uygulaması.
 
